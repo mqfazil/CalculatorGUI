@@ -8,13 +8,13 @@
 <?import javafx.scene.paint.Color?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="420.0" prefWidth="286.0" style="-fx-background-color: #262322;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.calculator.HelloController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="420.0" prefWidth="286.0" style="-fx-background-color: #262322;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.calculator.ButtonColorChange">
    <children>
       <Label fx:id="lblAnswer" alignment="CENTER_RIGHT" layoutX="3.0" layoutY="24.0" prefHeight="43.0" prefWidth="280.0" style="-fx-background-color: #262322;" textFill="WHITE">
          <font>
             <Font name="Arial Black" size="24.0" />
          </font></Label>
-      <TextField fx:id="txtShow" alignment="CENTER_RIGHT" editable="false" layoutX="3.0" layoutY="67.0" prefHeight="44.0" prefWidth="279.0" style="-fx-background-color: x #262322; -fx-text-fill: white;">
+      <TextField fx:id="txtShow" alignment="CENTER_RIGHT" editable="false" layoutX="3.0" layoutY="67.0" prefHeight="44.0" prefWidth="279.0" style="-fx-background-color: #262322; -fx-text-fill: white;">
          <font>
             <Font name="Arial Black" size="24.0" />
          </font>
