@@ -23,14 +23,14 @@ public class HelloController {
         answer = 0;
         buttonList = FXCollections.observableArrayList(btn0,btn1,btn2,btn3,btn4,btn5,btn6,btn7,btn8,btn9,btnAdd,btnC,btnCE,btnDecimal,
                 btnDivide,btnEqual,btnMultiply,btnPercent,btnSubtract);
-        setAnswer();
-        functions();
+        updateDisplay();
+        setButtons();
     }
-    private void setAnswer(){ //updates the user interface to show calculator after operations have been performed
+    private void updateDisplay(){ //updates the user interface to show calculator after operations have been performed
         lblAnswer.setText(String.format("%.2f", answer));
         txtShow.clear();
     }
-    private void functions() { // sets up button usage
+    private void setButtons() { //sets up button usage
         btnC.setOnAction(e -> txtShow.clear());
         btnCE.setOnAction(e -> {
             function = "empty";
@@ -58,7 +58,6 @@ public class HelloController {
             function = "empty"; // resets after calculation
         });
     }
-
     private void prepareOperation(String operation) {
         if (!txtShow.getText().isEmpty()) {
             answer = Double.parseDouble(txtShow.getText());  //use the displayed value as the new base
@@ -86,12 +85,12 @@ public class HelloController {
                     answer *= percent;  //multiply the current answer by the percentage decimal
                     break;
             }
-            setAnswer(); //updates the display with the new answer
+            updateDisplay(); //updates the display with the new answer
             txtShow.clear();  //clears or displays new result in txtShow
         }
     }
     @Override
     public String toString() {
-        return "HelloController [answer=" + answer + ", function=" + function + "]";
+        return String.format("HelloController [answer=%.2f, function=%s]", answer, function);
     }
 }
