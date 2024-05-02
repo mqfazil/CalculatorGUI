@@ -37,7 +37,7 @@ public class HelloController {
             answer = 0;
             lblAnswer.setText("0.00");
         });
-        btn0.setOnAction(e -> txtShow.setText(txtShow.getText() != null ? txtShow.getText() + "0" : "0"));
+        btn0.setOnAction(e -> txtShow.setText(txtShow.getText() != null ? txtShow.getText() + "0" : "0")); //lambda expressions that sets an action for the corresponding numbered button
         btn1.setOnAction(e -> txtShow.setText(txtShow.getText() != null ? txtShow.getText() + "1" : "1"));
         btn2.setOnAction(e -> txtShow.setText(txtShow.getText() != null ? txtShow.getText() + "2" : "2"));
         btn3.setOnAction(e -> txtShow.setText(txtShow.getText() != null ? txtShow.getText() + "3" : "3"));
